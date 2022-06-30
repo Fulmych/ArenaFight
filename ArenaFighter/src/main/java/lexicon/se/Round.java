@@ -28,7 +28,7 @@ public class Round {
         }
         System.out.println(p.getName() + "\nHP: " + p.getHitpoints());
         System.out.println(o.getName() + "\nHP: " + o.getHitpoints());
-        System.out.println("");
+        System.out.println();
         roundNumber++;
         try {
             TimeUnit.SECONDS.sleep(2);

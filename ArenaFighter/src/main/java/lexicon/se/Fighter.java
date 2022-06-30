@@ -1,4 +1,5 @@
 package lexicon.se;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -86,14 +87,12 @@ public class Fighter {
     }
     public void addToHistory(String log){
         String[] newHistory = new String[history.length+1];
-        for (int i=0;i<newHistory.length;i++) {
-            newHistory[i] = log;
-        }
+        Arrays.fill(newHistory, log);
         history = newHistory.clone();
     }
     public void printHistory(){
-        for (int i = 0;i<history.length;i++){
-            System.out.println(history[i]);
+        for (String s : history) {
+            System.out.println(s);
         }
     }
 }
